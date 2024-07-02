@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f897ba1-283e-4e18-bfd2-f86d60e1ec05" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web_application.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/crud/templates/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/crud/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud/templates/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/crud/templates/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_application/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_application/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="4f897ba1-283e-4e18-bfd2-f86d60e1ec05" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +122,7 @@
       <updated>1719043991298</updated>
       <workItem from="1719043992796" duration="11254000" />
       <workItem from="1719131532054" duration="17651000" />
-      <workItem from="1719419689035" duration="1297000" />
+      <workItem from="1719419689035" duration="1530000" />
     </task>
     <servers />
   </component>

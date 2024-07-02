@@ -72,31 +72,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'web_application.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': os.getenv('DATABASE_NAME', 'web_application'),
-    #     'USER': os.getenv('DATABASE_USER', 'root'),
-    #     'PASSWORD': os.getenv('DATABASE_PASSWORD', 'Loan@1456'),
-    #     'HOST': os.getenv('DATABASE_HOST', 'db'),
-    #     'PORT': os.getenv('DATABASE_PORT', '3306'),
-    # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'web_application',
+        'NAME': os.getenv('MYSQL_DATABASE', 'web_application'),
         'USER': 'root',
-        'PASSWORD': 'Loan@1456',
-        'HOST': '127.0.0.1',
-        'PORT': '3309',
+        'PASSWORD': os.getenv('MYSQL_ROOT_PASSWORD', 'Loan@1456'),
+        'HOST': 'db',
+        'PORT': '3306',
     }
 }
-
-
-# Password validation
-# https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -112,10 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
-# Internationalization
-# https://docs.djangoproject.com/en/2.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 

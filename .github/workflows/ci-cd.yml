@@ -44,6 +44,10 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/myapp:latest .
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/myapp:latest
+      - name: Add server to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H 127.0.0.1 >> ~/.ssh/known_hosts
 
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.5.3

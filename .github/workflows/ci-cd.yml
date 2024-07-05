@@ -42,9 +42,6 @@ jobs:
       - name: Build Docker containers
         run: docker-compose -f docker-compose.yml build
 
-      - name: Run Docker Compose
-        run: docker-compose up -d
-
       - name: Build and push Docker image
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/myapp:latest .

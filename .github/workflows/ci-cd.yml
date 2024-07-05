@@ -61,9 +61,9 @@ jobs:
       #   env:
       #     SSH_AUTH_SOCK: ${{ job.services.ssh-agent.outputs.SSH_AUTH_SOCK }}
 
-      - name: Run migrations
-        run: |
-          docker-compose -f docker-compose.yml run web python manage.py migrate
+      # - name: Run migrations
+      #   run: |
+      #     docker-compose -f docker-compose.yml run web python manage.py migrate
 
       - name: Run tests
         run: |

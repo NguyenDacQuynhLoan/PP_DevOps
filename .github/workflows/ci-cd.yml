@@ -45,21 +45,21 @@ jobs:
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/myapp:latest .
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/myapp:latest
 
-      - name: Add server to known_hosts
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -H 127.0.0.1 >> ~/.ssh/known_hosts
+      # - name: Add server to known_hosts
+      #   run: |
+      #     mkdir -p ~/.ssh
+      #     ssh-keyscan -H 127.0.0.1 >> ~/.ssh/known_hosts
 
-      - name: Set up SSH key
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      # - name: Set up SSH key
+      #   uses: webfactory/ssh-agent@v0.5.3
+      #   with:
+      #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Deploy to server
-        run: |
-          ssh quynhloan@127.0.0.1 'docker pull ${{ secrets.DOCKERHUB_USERNAME }}/myapp:latest && docker-compose up -d'
-        env:
-          SSH_AUTH_SOCK: ${{ job.services.ssh-agent.outputs.SSH_AUTH_SOCK }}
+      # - name: Deploy to server
+      #   run: |
+      #     ssh quynhloan@127.0.0.1 'docker pull ${{ secrets.DOCKERHUB_USERNAME }}/myapp:latest && docker-compose up -d'
+      #   env:
+      #     SSH_AUTH_SOCK: ${{ job.services.ssh-agent.outputs.SSH_AUTH_SOCK }}
 
       - name: Run migrations
         run: |
